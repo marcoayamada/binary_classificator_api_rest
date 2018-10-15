@@ -1,23 +1,13 @@
-#!/usr/bin/env python3
-
 import connexion
 
-from sklearn.externals import joblib
+# Create the application instance
+app = connexion.App(__name__, specification_dir='./')
 
-classifier = joblib.load('./pickles/text_binary_clas.save')
-
-
-def post_predictions(query):
-    predictions = []
-    for item in query:
-        text = item['text']
-        category = classifier.predict([text])[0]
-        predictions.append({"category": category, "text": text})
-    return predictions
+# Read the swagger.yml file to configure the endpoints
+app.add_api('swagger.yml')
 
 
-app = connexion.App(__name__)
-app.add_api('swagger.yaml')
 
+# If we're running in stand alone mode, run the application
 if __name__ == '__main__':
-    app.run(port=8080, server='gevent')
+    app.run(host='0.0.0.0', port=5000, debug=True)

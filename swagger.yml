@@ -1,0 +1,31 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  version: "1.0.0"
+  title: Swagger REST for Naive bayes model
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+# Paths supported by the server application
+paths:
+  /predictions:
+    post:
+      operationId: naive_model.phrase_pred
+      summary: Predicts categories of the given news articles
+      parameters:
+        - name: phrase
+          in: body
+          schema:
+            type: object
+            properties:
+              p1:
+                type: string
+                description: lalaalallala
+      responses:
+        201:
+          description: Returns predicted categories
+          
