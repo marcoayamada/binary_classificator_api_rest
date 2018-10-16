@@ -1,4 +1,4 @@
-# not should import
+# can't import
 #from sklearn.feature_extraction.text import CountVectorizer
 #from sklearn.naive_bayes import BernoulliNB
 

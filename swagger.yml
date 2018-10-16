@@ -1,8 +1,8 @@
 swagger: "2.0"
 info:
-  description: This is the swagger file that goes with our server code
+  title: Sentiment analysis API
+  description: This is a API from sentiment analysis model
   version: "1.0.0"
-  title: Swagger REST for Naive bayes model
 consumes:
   - "application/json"
 produces:
@@ -16,9 +16,9 @@ paths:
     post:
       operationId: naive_model.phrase_pred
       tags:
-        - Text
-      summary: mahoe
-      description: mahoe2
+        - Sentiment analysis
+      summary: Get sentiment from phrase
+      description: ""
       parameters:
         - name: body
           in: body
@@ -32,5 +32,5 @@ paths:
                 items:
                   type: string
       responses:
-        default:
-          description: "successful operation"
+        200:
+          description: "OK"
