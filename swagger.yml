@@ -12,20 +12,25 @@ basePath: "/api"
 
 # Paths supported by the server application
 paths:
-  /predictions:
+  /preds:
     post:
       operationId: naive_model.phrase_pred
-      summary: Predicts categories of the given news articles
+      tags:
+        - Text
+      summary: mahoe
+      description: mahoe2
       parameters:
-        - name: phrase
+        - name: body
           in: body
+          description: in body
+          required: True
           schema:
             type: object
             properties:
-              p1:
-                type: string
-                description: lalaalallala
+              phrases: 
+                type: array
+                items:
+                  type: string
       responses:
-        201:
-          description: Returns predicted categories
-          
+        default:
+          description: "successful operation"
