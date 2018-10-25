@@ -9,6 +9,6 @@ Esse pequeno exemplo mostra como fazer a análise de sentimentos usando ``Naive 
 
 Para rodar, basta executar ``python app.py``. Para acessar a página do Swagger digite: ``localhost:5000/api/ui``. Resultados ``1 = Positivo`` e ``0 = Negativo``.
 
-Para acessar o app no Heroku, acesse: https://testbinary.herokuapp.com/api/ui/
+Para acessar o app no Heroku, acesse: https://marco-binary-class.herokuapp.com/api/ui/
 
 Acessando a UI do Swagger, é possível ver o padrão de envio e recebimento das mensagens.
