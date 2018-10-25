@@ -1,4 +1,4 @@
-# Disponibilizando uma API REST de um modelo de análise de sentimentos
+# API de análise de sentimentos no Heroku
 
 Esse pequeno exemplo mostra como fazer a análise de sentimentos usando ``Naive bayes`` do ``sklearn`` e disponibilizar o modelo em uma API REST. Bibliotecas usadas no projeto:
 
